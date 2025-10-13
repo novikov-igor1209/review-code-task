@@ -82,7 +82,7 @@ class CashCalculator(Calculator):
         """ 
         Куча текста мешает восприятию. Я бы заменил на:
         ...
-        if cash_remained > 0:
+      if cash_remained > 0:
              return ( f'На сегодня осталось {round(cash_remained, 2)} ' f'{currency_type}')
         elif cash_remained == 0:
             return 'Денег нет, держись'
