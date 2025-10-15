@@ -75,6 +75,7 @@ class CashCalculator(Calculator):
             return 'Денег нет, держись:' \
                    ' твой долг - {0:.2f} {1}'.format(-cash_remained,
                                                      currency_type)
+        
         """
         Куча текста мешает восприятию. Я бы заменил на:
         ...
