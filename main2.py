@@ -24,7 +24,6 @@ class Record:
                 self.date = dt.datetime.now().date()
     """
 
-
 class Calculator:
     def __init__(self, limit):
         self.limit = limit
@@ -40,7 +39,6 @@ class Calculator:
         today = dt.datetime.now().date()
         return sum([rec.amount for rec in self.records if 7 > (today - rec.date).days >= 0])
 
-
 class CaloriesCalculator(Calculator):
     def get_calories_remained(self):  # Получает остаток калорий на сегодня
         x = self.limit - self.get_today_stats()
@@ -50,11 +48,9 @@ class CaloriesCalculator(Calculator):
         else:
             return ('Хватит есть!')
 
-
 class CashCalculator(Calculator):
     USD_RATE = float(60)  # Курс доллар США.
     EURO_RATE = float(70)  # Курс Евро.
-
     def get_today_cash_remained(self, currency,
                                 USD_RATE=USD_RATE, EURO_RATE=EURO_RATE):
         cash_remained = self.limit - self.get_today_stats()
@@ -94,9 +90,7 @@ class CashCalculator(Calculator):
 
     def get_week_stats(self):
         super().get_week_stats()
-
-
-
+        
 """
 Названия классов Calculator, CaloriesCalculator(Calculator),CashCalculator(Calculator)
 делают код менее читаемым из-за длинных и повторяющихся слов.
